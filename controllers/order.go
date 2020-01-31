@@ -117,6 +117,7 @@ func (this *OrderController) Get() {
 
 		// return
 		this.Data["json"] = map[string]string{"orderCount": strconv.Itoa(orderCount), "timestamp": time.Now().String()}
+		this.Data["json"] = map[string]string{"orderCount": strconv.Itoa(orderCount), "timestamp": time.Now().String()}
 	} else {
 		this.Data["json"] = map[string]string{"error": "couldn't query order count. Check logs: " + err.Error()}
 		this.Ctx.Output.SetStatus(500)
